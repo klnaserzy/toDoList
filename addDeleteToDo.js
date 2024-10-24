@@ -20,14 +20,13 @@ const addTodo = () => {
             deadLine.value = "";
             return ;
         }
-    }else if(parseInt(deadLineDate) > 2200){
         console.log(deadLineDate)
-        if(confirm("Perhaps reconsider the date, or you may need to discuss it with your child.")){
+    }else if(parseInt(deadLineDate) > 2200){
+        if(!confirm("Perhaps reconsider the date, or you may need to discuss it with your child.")){
             deadLine.value = "";
             return ;
         }
     }
-
 
     todoLocalStorage.push({
         id: title + Date.now(),
@@ -57,7 +56,7 @@ const updateYourList = () => {
                 <p>${todo.title ? todo.title : "title"}</p>
             </div>
             <div class="td">
-                <p>2024/10/23</p>
+                <p>${todo.date}</p>
             </div>
             <div id="describe" class="td">
                 <p>${todo.describe}</p>
