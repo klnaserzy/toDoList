@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width initial-scale=1.0" />
+        <title>todo list</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body>
+        <button id="show-all" class="hidden">
+            <i class="fa-solid fa-eye"></i>
+        </button>
+        <div id="home" class="page active">
+            <div id="home-container">
+                <div id='sidebar' class="sidebar">
+                    <div id="sidebar-buttons" class="sidebar-buttons">
+                        <button id="close-sidebar-button">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <button id="hidden-all">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </button>
+                        <button id="img-gallery-nav">
+                            <a href="#img-gallery" class="nav-link">
+                                <i class="fa-solid fa-image"></i>
+                            </a>
+                        </button>
+                    </div>
+                    <div id="left-container">
+                        <ul class="drop-items">
+                            <li>
+                                <button id="drop-add-button">New to do</button>
+                                <div id="fill-in-todo" class="hidden">
+                                    <form>
+                                        <p class="instruction">Title: </p>
+                                        <input id="todoTitle" type="text" placeholder="something title" autocomplete="off" required/>
+                                        <p class="instruction">Describe: </p>
+                                        <textarea id="describeTextarea" placeholder="describe..." rows="4"></textarea>
+                                        <p class="instruction">Date (dead line): </p>
+                                        <div class="wrapper">
+                                            <input id="deadLine" type="date" />
+                                            <input id="addTodoBtn" value="add todo" type="button">
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="drop-least-events-button">Least event</button>
+                                <div id="least-events" class="hidden">
+                                    <p>least time event:</p>
+                                    <ul id="events">
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button id="choose-font-size">font size(invalid)</button>
+                                <div id="font-size-container" class="hidden">
+                                    <ul id="font-sizes">
+                                        <li>
+                                            <input id="font-small" type="radio" name='font-size'>
+                                            <label for="font-small">small</label>
+                                        </li>
+                                        <li>
+                                            <input id="font-medium" type="radio" name='font-size' checked>
+                                            <label for="font-medium">medium</label>
+                                        </li>
+                                        <li>
+                                            <input id="font-large" type="radio" name='font-size'>
+                                            <label for="font-large">large</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div id="right-container">
+                    <div id="provider-and-clock">
+                        <div id="timeContainer">
+                            <div id="yearMon"></div>
+                            <div id="nowDate">00:00:00</div>
+                        </div>
+                        <div id="background-provider">
+                            <a href="https://www.pexels.com" target="_blank" title="go to pexels website">
+                                <img src="https://images.pexels.com/lib/api/pexels-white.png" />
+                            </a>
+                            <span id="photographer">
+                                <a href="https://www.pexels.com/@marcel-loffler-366529953/" target="_blank" title="find photographer">photographer: Marcel Löffler</a>
+                            </span>
+                        </div>
+    
+                    </div>
+                    <div id="todoList">
+                        <div id="list">
+                            <div id="table">
+                                <div id="table-head">
+                                    <p>title</p>
+                                    <p>date</p>
+                                    <p>describe</p>
+                                    <p>state</p>
+                                    <p>delete</p>
+                                </div>
+                                <div id="table-body">
+                                    <div id="todoTask" class="tr">
+                                        <!--
+                                            <div class="td">
+                                                <p>${todo.title ? todo.title : "title"}</p>
+                                            </div>
+                                            <div class="td">
+                                                <p>2024/10/23</p>
+                                            </div>
+                                            <div id="describe" class="td">
+                                                <p>${todo.describe}</p>
+                                            </div>
+                                            <div class="td">
+                                                <select id="select-${todo.id}" class="select" name="${todo.id}" >
+                                                    <option ${todo.state === "to-do" ? "selected" : ""} value="to-do">to-do</option>
+                                                    <option ${todo.state === "in-progress" ? "selected" : ""} value="in-progress">in progress</option>
+                                                    <option ${todo.state === "done" ? "selected" : ""} value="done">done</option>
+                                                </select>
+                                            </div>
+                                            <div id=delete-${todo.id} class="td">
+                                                <button>delete</button>
+                                            </div>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="img-gallery" class="page">
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <div id="modal-container" class="close">
+                <div class="icon">
+                    <i id="modal-close" class="fa-solid fa-xmark fa-2xl"></i>
+                </div>
+                <div id="modal">
+                    <div id="gotoLink">
+                    </div>
+                </div>
+            </div>
+            <div id="container">
+                <div id="backToTodoListBackground">
+                    <a id="backToTodoListLink" href="./index.html" title="back"><i id="arrowLeft" class="fa-solid fa-arrow-left fa-lg"></i></a>
+                </div>
+                <div id="gallery">
+                </div>
+            </div>
+        </div>
+        
+        <script src="./body_background_img.js" type="module"></script>
+        <script src="./addDeleteToDo.js" type="module"></script>
+        <script src="./sidebarDrop.js" type="module"></script>
+        <script src="./router.js" type="module"></script>
+    </body>
+</html>
