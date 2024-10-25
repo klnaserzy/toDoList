@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width initial-scale=1.0" />
         <title>todo list</title>
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./base.css">
+        <link rel="stylesheet" href="./homePage.css" />
+        <link rel="stylesheet" href="./imgGallery.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
     <body>
@@ -135,9 +137,6 @@
         </div>
         
         <div id="img-gallery" class="page">
-            <a href="#home" class="nav-link">
-                <i class="fa-solid fa-house"></i>
-            </a>
             <div id="modal-container" class="close">
                 <div class="icon">
                     <i id="modal-close" class="fa-solid fa-xmark fa-2xl"></i>
@@ -148,8 +147,10 @@
                 </div>
             </div>
             <div id="container">
-                <div id="backToTodoListBackground">
-                    <a id="backToTodoListLink" href="./index.html" title="back"><i id="arrowLeft" class="fa-solid fa-arrow-left fa-lg"></i></a>
+                <div id="backHomePage">
+                    <a id="backHomePageLink" href="#home" class="nav-link">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
                 </div>
                 <div id="gallery">
                 </div>
@@ -160,5 +161,6 @@
         <script src="./addDeleteToDo.js" type="module"></script>
         <script src="./sidebarDrop.js" type="module"></script>
         <script src="./router.js" type="module"></script>
+        <script src="./imgGallery.js" type="module"></script>
     </body>
 </html>
