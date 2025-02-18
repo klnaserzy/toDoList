@@ -18,14 +18,14 @@
     width: 30px;
     height: 30px;
     font-size: 1.2em;
-    background-color: white;
-    border: 1px solid #000;
+    box-shadow: 0 0 3px 5px rgba(255, 255, 255, 0.445);
+    background-color: rgba(255, 255, 255, 0.445);
     padding: 3px 3px 2px 3px;
-    border-radius: 3px;
+    border-radius: 50%;
     text-align: center;
     color: black;
 
-    transition:  .2s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 #backHomePageLink:hover {
@@ -56,6 +56,7 @@
     padding-bottom: 10px;
     border-radius: 10px;
     box-shadow: 4px 4px 2px 2px #0000004e;
+    align-self: stretch; /* 確保所有box的高度都拉伸到一致 */
 
     display: flex;
     flex-direction: column;

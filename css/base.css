@@ -1,9 +1,10 @@
 :root {
     --gray: #e2e2e266;
-    --fill-in: #9999997d;
-    --background-color: #31313181;
+    --fill-in: rgba(90, 90, 90, 0.447);
+    --background-color: #313131a8;
     --font-color: #eee;
     --border-color: #6f787d;
+    --gray-table-color: #0000004a;
 }
 
 * {
@@ -18,7 +19,7 @@ body {
     width: 100%;
     min-height: 100vh;
     position: relative;
-    background-image: url(./background_image/pexels-photo-15061262.webp);
+    background-image: url(../background_image/pexels-photo-15061262.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
